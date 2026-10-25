@@ -1,0 +1,1155 @@
+{
+  "date": "2026-10-25",
+  "stage": "3-03",
+  "file": {
+    "id": "685eebd9-2ce2-80a4-8008-d7b0b4e16646",
+    "name": "새 파일 1"
+  },
+  "pages": [
+    {
+      "id": "685eebd9-2ce2-80a4-8008-d7b0b4e16647",
+      "name": "Page 1"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c65bf4c976",
+      "name": "FishingKing / MCP Write Test / 3-03"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c68dbaf326",
+      "name": "FishingKing / Design System"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c68dbbbde5",
+      "name": "FishingKing / Components"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "name": "FishingKing / Screens"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "name": "FishingKing / Mobile Game"
+    }
+  ],
+  "tokens": [
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c697a1bb17",
+      "name": "FishingKingDraft",
+      "active": true,
+      "tokens": [
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697a666c9",
+          "name": "fk.color.background",
+          "type": "color",
+          "value": "#071827"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697a930d0",
+          "name": "fk.color.surface",
+          "type": "color",
+          "value": "#12344D"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ab04d6",
+          "name": "fk.color.elevated",
+          "type": "color",
+          "value": "#1A4661"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ace18c",
+          "name": "fk.color.primary",
+          "type": "color",
+          "value": "#2DD4BF"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697b06fb5",
+          "name": "fk.color.pressed",
+          "type": "color",
+          "value": "#14B8A6"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697b22ec6",
+          "name": "fk.color.gold",
+          "type": "color",
+          "value": "#F5C451"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697b46d69",
+          "name": "fk.color.text",
+          "type": "color",
+          "value": "#F3F8FC"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697b5c1b0",
+          "name": "fk.color.muted",
+          "type": "color",
+          "value": "#ADC4D4"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697b83904",
+          "name": "fk.color.border",
+          "type": "color",
+          "value": "#53778E"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697b9c0a1",
+          "name": "fk.color.danger",
+          "type": "color",
+          "value": "#FF9EAA"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697bbaa41",
+          "name": "fk.color.focus",
+          "type": "color",
+          "value": "#7DDEFF"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697bd47ab",
+          "name": "fk.color.ink",
+          "type": "color",
+          "value": "#071827"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697bf2944",
+          "name": "fk.space.1",
+          "type": "spacing",
+          "value": "4px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697c11a8f",
+          "name": "fk.space.2",
+          "type": "spacing",
+          "value": "8px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697c2cf8d",
+          "name": "fk.space.3",
+          "type": "spacing",
+          "value": "12px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697c637de",
+          "name": "fk.space.4",
+          "type": "spacing",
+          "value": "16px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697c79a58",
+          "name": "fk.space.5",
+          "type": "spacing",
+          "value": "20px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697c94cb1",
+          "name": "fk.space.6",
+          "type": "spacing",
+          "value": "24px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697cb0983",
+          "name": "fk.space.7",
+          "type": "spacing",
+          "value": "32px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ccf110",
+          "name": "fk.space.8",
+          "type": "spacing",
+          "value": "48px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ced190",
+          "name": "fk.radius.sm",
+          "type": "borderRadius",
+          "value": "8px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697d0b489",
+          "name": "fk.radius.md",
+          "type": "borderRadius",
+          "value": "12px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697d2bc7c",
+          "name": "fk.radius.lg",
+          "type": "borderRadius",
+          "value": "16px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697d43f3a",
+          "name": "fk.radius.pill",
+          "type": "borderRadius",
+          "value": "999px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697d5c7a1",
+          "name": "fk.type.caption",
+          "type": "fontSizes",
+          "value": "12px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697d7e538",
+          "name": "fk.type.label",
+          "type": "fontSizes",
+          "value": "14px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697d9cfff",
+          "name": "fk.type.body",
+          "type": "fontSizes",
+          "value": "16px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697dbe722",
+          "name": "fk.type.subtitle",
+          "type": "fontSizes",
+          "value": "20px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697dda226",
+          "name": "fk.type.title",
+          "type": "fontSizes",
+          "value": "28px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697dfab3f",
+          "name": "fk.type.hero",
+          "type": "fontSizes",
+          "value": "48px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697e1b946",
+          "name": "fk.type.family",
+          "type": "fontFamilies",
+          "value": [
+            "Noto Sans KR"
+          ]
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697e45fa6",
+          "name": "fk.type.regular",
+          "type": "fontWeights",
+          "value": "400"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697e674cc",
+          "name": "fk.type.bold",
+          "type": "fontWeights",
+          "value": "700"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697e857b8",
+          "name": "fk.button.min",
+          "type": "sizing",
+          "value": "44px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ea17d7",
+          "name": "fk.button.standard",
+          "type": "sizing",
+          "value": "48px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ec2abf",
+          "name": "fk.button.game",
+          "type": "sizing",
+          "value": "60px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ee1847",
+          "name": "fk.icon.sm",
+          "type": "sizing",
+          "value": "16px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697eff3ce",
+          "name": "fk.icon.md",
+          "type": "sizing",
+          "value": "20px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697f1ba7f",
+          "name": "fk.icon.lg",
+          "type": "sizing",
+          "value": "24px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697f3ed93",
+          "name": "fk.layout.mobile",
+          "type": "sizing",
+          "value": "390px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697f5ab8d",
+          "name": "fk.layout.tablet",
+          "type": "sizing",
+          "value": "768px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697f7aa8e",
+          "name": "fk.layout.desktop",
+          "type": "sizing",
+          "value": "1440px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697f9ba76",
+          "name": "fk.layout.content",
+          "type": "sizing",
+          "value": "1200px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697fbb595",
+          "name": "fk.layout.gutter",
+          "type": "sizing",
+          "value": "16px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697fd57b3",
+          "name": "fk.layout.nav",
+          "type": "sizing",
+          "value": "56px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c697ff6281",
+          "name": "fk.hud.portrait",
+          "type": "sizing",
+          "value": "56px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698017aea",
+          "name": "fk.hud.landscape",
+          "type": "sizing",
+          "value": "44px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698037088",
+          "name": "fk.touch.direction",
+          "type": "sizing",
+          "value": "132px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698053998",
+          "name": "fk.touch.action",
+          "type": "sizing",
+          "value": "128px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698070165",
+          "name": "fk.touch.gap",
+          "type": "sizing",
+          "value": "8px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c69809333a",
+          "name": "fk.touch.groupGap",
+          "type": "sizing",
+          "value": "12px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c6980b6645",
+          "name": "fk.touch.panel",
+          "type": "sizing",
+          "value": "176px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c6980da13d",
+          "name": "fk.touch.sceneMin",
+          "type": "sizing",
+          "value": "160px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698101303",
+          "name": "fk.touch.sceneCompact",
+          "type": "sizing",
+          "value": "120px"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698123222",
+          "name": "fk.shadow.card",
+          "type": "shadow",
+          "value": [
+            {
+              "offsetX": "0",
+              "offsetY": "8",
+              "blur": "24",
+              "spread": "0",
+              "color": "#00000066",
+              "inset": false
+            }
+          ]
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698141b3b",
+          "name": "fk.layer.content",
+          "type": "number",
+          "value": "0"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c6981671f0",
+          "name": "fk.layer.hud",
+          "type": "number",
+          "value": "10"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c69818aa25",
+          "name": "fk.layer.controls",
+          "type": "number",
+          "value": "20"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c6981ad60b",
+          "name": "fk.layer.sheet",
+          "type": "number",
+          "value": "30"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c6981dbada",
+          "name": "fk.layer.alert",
+          "type": "number",
+          "value": "40"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c6981fb72a",
+          "name": "fk.motion.fast",
+          "type": "number",
+          "value": "120"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698218991",
+          "name": "fk.motion.normal",
+          "type": "number",
+          "value": "200"
+        },
+        {
+          "id": "a2dba513-1242-80ae-8008-d7c698257fa1",
+          "name": "fk.motion.reduced",
+          "type": "number",
+          "value": "0"
+        }
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a49aba99",
+      "name": "border",
+      "color": "#53778E"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a49d18e6",
+      "name": "focus",
+      "color": "#7DDEFF"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a4903212",
+      "name": "background",
+      "color": "#071827"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a49be528",
+      "name": "danger",
+      "color": "#FF9EAA"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a4947920",
+      "name": "primary",
+      "color": "#2DD4BF"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a4997e4e",
+      "name": "muted",
+      "color": "#ADC4D4"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a4932193",
+      "name": "elevated",
+      "color": "#1A4661"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a491e83c",
+      "name": "surface",
+      "color": "#12344D"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a49828a5",
+      "name": "text",
+      "color": "#F3F8FC"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a496e906",
+      "name": "gold",
+      "color": "#F5C451"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a49e2607",
+      "name": "ink",
+      "color": "#071827"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a495b8d2",
+      "name": "pressed",
+      "color": "#14B8A6"
+    }
+  ],
+  "typographies": [
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a6ad81b9",
+      "name": "hero",
+      "fontFamily": "Noto Sans KR",
+      "fontSize": "48"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a6bb5db8",
+      "name": "title",
+      "fontFamily": "Noto Sans KR",
+      "fontSize": "28"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a6c98cf6",
+      "name": "subtitle",
+      "fontFamily": "Noto Sans KR",
+      "fontSize": "20"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a6d825d9",
+      "name": "body",
+      "fontFamily": "Noto Sans KR",
+      "fontSize": "16"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a6e51ea0",
+      "name": "label",
+      "fontFamily": "Noto Sans KR",
+      "fontSize": "14"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6a6f28896",
+      "name": "caption",
+      "fontFamily": "Noto Sans KR",
+      "fontSize": "12"
+    }
+  ],
+  "components": [
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dc3ce65b",
+      "name": "DesktopNavigation",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6db97f62b"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f9617a28",
+      "name": "CastButton disabled",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f9261b7c"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f9231510",
+      "name": "CastButton pressed",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f8e821b7"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6ddfd6f08",
+      "name": "RankingRow",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6ddd8eade"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f7f28baf",
+      "name": "SecondaryButton disabled",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f7bb7889"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dd72cc8c",
+      "name": "SecondaryButton",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dd485a2e"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6e1614847",
+      "name": "DirectionControl",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6e08e1b9f"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6e08aafba",
+      "name": "HookButton",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6e0597981"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f7b88273",
+      "name": "SecondaryButton pressed",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f77a5365"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6df5be75f",
+      "name": "LoadingState",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6df283b06"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f9d5f5f3",
+      "name": "ReelButton pressed",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f99a5f85"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6db952ace",
+      "name": "AppHeader",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6db5a7a10"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f8e45e04",
+      "name": "IconButton focus",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f8adecd1"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6e1a582a4",
+      "name": "PrimaryButton pressed",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6e164ff84"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dd45e041",
+      "name": "PrimaryButton",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dd1b6c46"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6fad0024b",
+      "name": "HookButton disabled",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6fa90fa8e"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dd18f026",
+      "name": "MobileNavigation",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dc3f8fbf"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6df9f5cf9",
+      "name": "EmptyState",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6df600efc"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6fb57165b",
+      "name": "InputField error",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6fb0b13e4"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f8aa259c",
+      "name": "IconButton disabled",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f86c4908"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6fa4bae9a",
+      "name": "ReelButton focus",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6fa18892e"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dedf7d50",
+      "name": "Modal",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6de64798c"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6e05632bc",
+      "name": "ReelButton",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6e024b77a"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6de61e989",
+      "name": "StatusBadge",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6de36fd18"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f8696dfe",
+      "name": "IconButton pressed",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f82c43eb"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f828cf66",
+      "name": "SecondaryButton focus",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f7f66f6c"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6df256d46",
+      "name": "InputField",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dee21a7c"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f997bf5d",
+      "name": "CastButton focus",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f9645fe5"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dfec735b",
+      "name": "GameHUD",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dfa2719c"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6f776d189",
+      "name": "PrimaryButton focus",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6e1ee47c2"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6dda0fbd4",
+      "name": "IconButton",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dd755de5"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6ddd6a40e",
+      "name": "FishCard",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dda2f0f4"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6e021860e",
+      "name": "CastButton",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6dfefbda3"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6fa8da896",
+      "name": "HookButton pressed",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6fa4f64f7"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6fb078303",
+      "name": "HookButton focus",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6fad394d4"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6de345177",
+      "name": "ProfileCard",
+      "path": "FishingKing",
+      "main": "a2dba513-1242-80ae-8008-d7c6ddfff1da"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6e1eadc4f",
+      "name": "PrimaryButton disabled",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6e1a906f4"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c6fa155734",
+      "name": "ReelButton disabled",
+      "path": "FishingKing / States",
+      "main": "a2dba513-1242-80ae-8008-d7c6f9d8f900"
+    }
+  ],
+  "frames": [
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c73e91c467",
+      "name": "S01-Main / MP-320x568 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S01-Main",
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7410d1055",
+      "name": "S01-Main / MP-390x844 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S01-Main",
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c743bc9c1f",
+      "name": "S01-Main / MP-430x932 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S01-Main",
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c746835cff",
+      "name": "S01-Main / ML-844x390 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S01-Main",
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c749073d2a",
+      "name": "S01-Main / TP-768x1024 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S01-Main",
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c74bc2c00e",
+      "name": "S01-Main / DP-1440x900 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S01-Main",
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c74f44da0f",
+      "name": "S03-Collection / MP-320x568 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S03-Collection",
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c752a61d44",
+      "name": "S03-Collection / MP-390x844 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S03-Collection",
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c75777005c",
+      "name": "S03-Collection / MP-430x932 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S03-Collection",
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c75c993b50",
+      "name": "S03-Collection / ML-844x390 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S03-Collection",
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7619080b9",
+      "name": "S03-Collection / TP-768x1024 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S03-Collection",
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c766d463a0",
+      "name": "S03-Collection / DP-1440x900 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S03-Collection",
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c76c6aaba9",
+      "name": "S04-Ranking / MP-320x568 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S04-Ranking",
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c77270938f",
+      "name": "S04-Ranking / MP-390x844 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S04-Ranking",
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c77a830303",
+      "name": "S04-Ranking / MP-430x932 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S04-Ranking",
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7835d2c82",
+      "name": "S04-Ranking / ML-844x390 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S04-Ranking",
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c789e2dccd",
+      "name": "S04-Ranking / TP-768x1024 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S04-Ranking",
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c793551e05",
+      "name": "S04-Ranking / DP-1440x900 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S04-Ranking",
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c79b433ace",
+      "name": "S05-Profile / MP-320x568 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S05-Profile",
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7a31b0331",
+      "name": "S05-Profile / MP-390x844 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S05-Profile",
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7ab5ba1ea",
+      "name": "S05-Profile / MP-430x932 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S05-Profile",
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7b3841e5f",
+      "name": "S05-Profile / ML-844x390 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S05-Profile",
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7ba6a93c2",
+      "name": "S05-Profile / TP-768x1024 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S05-Profile",
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7c33e4866",
+      "name": "S05-Profile / DP-1440x900 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S05-Profile",
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7cad74cd3",
+      "name": "S06-Login / MP-320x568 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S06-Login",
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7cfe8b4b3",
+      "name": "S06-Login / MP-390x844 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S06-Login",
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7d4ecd339",
+      "name": "S06-Login / MP-430x932 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S06-Login",
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7da02bf9b",
+      "name": "S06-Login / ML-844x390 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S06-Login",
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7e1c233ae",
+      "name": "S06-Login / TP-768x1024 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S06-Login",
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c7e9c5ac2f",
+      "name": "S06-Login / DP-1440x900 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8",
+      "screen": "S06-Login",
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c84686cbfa",
+      "name": "S02-Fishing / MP-320x568 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c849758fe4",
+      "name": "S02-Fishing / MP-390x844 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c853e75ea0",
+      "name": "S02-Fishing / MP-430x932 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c85714f364",
+      "name": "S02-Fishing / ML-844x390 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c85a637a14",
+      "name": "S02-Fishing / TP-768x1024 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c85e041760",
+      "name": "S02-Fishing / DP-1440x900 / normal",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c916df692c",
+      "name": "S02-Fishing / MP-390x844 / bite",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "390x844",
+      "state": "bite"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c91a0a8dc3",
+      "name": "S02-Fishing / MP-390x844 / reeling",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "390x844",
+      "state": "reeling"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c91d724141",
+      "name": "S02-Fishing / MP-390x844 / cancelled",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "390x844",
+      "state": "cancelled"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c923551007",
+      "name": "S02-Fishing / ML-844x390 / loading",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "844x390",
+      "state": "loading"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c9266fdcee",
+      "name": "S02-Fishing / ML-844x390 / error",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "844x390",
+      "state": "error"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c92a27e227",
+      "name": "S02-Fishing / ML-844x390 / paused",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "844x390",
+      "state": "paused"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c92e7c7d11",
+      "name": "S02-Fishing / ML-844x390 / empty",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba",
+      "screen": "S02-Fishing",
+      "viewport": "844x390",
+      "state": "empty"
+    }
+  ],
+  "statusBoards": [
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c94ce00744",
+      "name": "S01-Main / State matrix",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c9510be7ca",
+      "name": "S03-Collection / State matrix",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c9707f7751",
+      "name": "S04-Ranking / State matrix",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c974453797",
+      "name": "S05-Profile / State matrix",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8"
+    },
+    {
+      "id": "a2dba513-1242-80ae-8008-d7c978899cd4",
+      "name": "S06-Login / State matrix",
+      "page": "a2dba513-1242-80ae-8008-d7c68dbcc9c8"
+    }
+  ],
+  "inputBoard": {
+    "id": "a2dba513-1242-80ae-8008-d7c980e5542a",
+    "name": "Input lifecycle / Safe Area / handoff",
+    "page": "a2dba513-1242-80ae-8008-d7c68dbdf3ba"
+  },
+  "responsiveBoard": {
+    "id": "a2dba513-1242-80ae-8008-d7ca2d5e7a7b",
+    "name": "Responsive rules / Components in use",
+    "page": "a2dba513-1242-80ae-8008-d7c68dbaf326"
+  },
+  "test": {
+    "page": "a2dba513-1242-80ae-8008-d7c65bf4c976",
+    "shape": "a2dba513-1242-80ae-8008-d7c65c0196e2"
+  },
+  "originalPage": {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "Root Frame",
+    "type": "board",
+    "children": []
+  }
+}

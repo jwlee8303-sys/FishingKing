@@ -23,10 +23,16 @@ RLS 및 인증·권한 확인을 적용하고 운영 데이터 변경은 사전 
 
 ## 자산과 Cloudflare
 
-public/assets는 아직 빈 리소스 폴더입니다. SVG는 UI/벡터, WebP는 래스터 자산에 사용합니다.
-향후 공개 R2 자산은 asset base URL로 조회하고 업로드 서명은 서버에서 발급합니다.
-R2 비밀키는 브라우저에 넣지 않습니다. Pages 배포·SPA 새로고침 fallback·캐시·R2 CORS는
-연결/배포 단계에서 실제 환경을 대상으로 검증합니다. 현재 배포 설정은 없습니다.
+public/assets에는 images·fish·backgrounds·icons·audio가 있으며 아직 실제 게임 리소스는 없습니다.
+SVG는 UI/벡터, WebP는 래스터 자산에 사용하고 GitHub에 이미지 원본 파일을 저장합니다.
+Vite가 public 내용을 dist로 복사하고 기존 Cloudflare Pages가 함께 제공하는 정적 구조를 사용합니다.
+UI와 PixiJS는 src/services/assets.ts의 getAssetUrl과 src/types/assets.ts의 상대 경로 타입을 공유합니다.
+기본 경로는 BASE_URL + assets/이며 제공자 주소를 페이지/게임 코드에 직접 넣지 않습니다.
+기존 선택 변수 VITE_ASSET_BASE_URL은 비워 두고, 향후 승인된 마이그레이션에서만 공개 URL로 설정합니다.
+R2는 과금 방지를 위해 의도적으로 보류하며 현재 연결·키·CORS 설정을 추가하지 않습니다.
+동적 파일은 필요 시 기존 Supabase Storage Free의 실제 플랜/용량/전송량/RLS를 확인한 뒤 별도로 설계합니다.
+유료 플랜·자동 과금 가능 기능·결제 수단은 사용자 사전 승인 없이 활성화하지 않습니다.
+기존 Pages Git 연동과 Preview 화면은 검증됐으며 이번 정책 변경에서는 원격 배포/설정을 바꾸지 않습니다.
 
 ## Penpot와 반응형
 

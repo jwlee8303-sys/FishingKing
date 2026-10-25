@@ -1,14 +1,18 @@
+import { useId } from 'react'
+
 interface PagePlaceholderProps {
   title: string
   description: string
+  headingLevel?: 'h1' | 'h2' | 'h3'
 }
 
-export function PagePlaceholder({ title, description }: PagePlaceholderProps) {
+export function PagePlaceholder({ title, description, headingLevel: Heading = 'h1' }: PagePlaceholderProps) {
+  const titleId = useId()
   return (
-    <section aria-labelledby="page-title" className="max-w-2xl rounded-lg border border-slate-200 bg-white p-6 sm:p-10">
-      <p className="mb-3 text-sm font-medium text-slate-600">개발 예정</p>
-      <h1 id="page-title" className="text-2xl font-semibold sm:text-3xl">{title}</h1>
-      <p className="mt-4 leading-7 text-slate-600">{description}</p>
+    <section aria-labelledby={titleId} className="panel max-w-2xl">
+      <p className="mb-3 text-sm font-medium text-fk-muted">개발 예정</p>
+      <Heading id={titleId} className="text-2xl font-semibold sm:text-3xl">{title}</Heading>
+      <p className="mt-4 leading-7 text-fk-muted">{description}</p>
     </section>
   )
 }

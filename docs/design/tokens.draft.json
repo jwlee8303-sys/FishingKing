@@ -1,0 +1,334 @@
+{
+  "version": "0.1",
+  "status": "draft",
+  "sourceFileId": "685eebd9-2ce2-80a4-8008-d7b0b4e16646",
+  "set": "FishingKingDraft",
+  "tokens": [
+    {
+      "name": "fk.color.background",
+      "type": "color",
+      "value": "#071827"
+    },
+    {
+      "name": "fk.color.surface",
+      "type": "color",
+      "value": "#12344D"
+    },
+    {
+      "name": "fk.color.elevated",
+      "type": "color",
+      "value": "#1A4661"
+    },
+    {
+      "name": "fk.color.primary",
+      "type": "color",
+      "value": "#2DD4BF"
+    },
+    {
+      "name": "fk.color.pressed",
+      "type": "color",
+      "value": "#14B8A6"
+    },
+    {
+      "name": "fk.color.gold",
+      "type": "color",
+      "value": "#F5C451"
+    },
+    {
+      "name": "fk.color.text",
+      "type": "color",
+      "value": "#F3F8FC"
+    },
+    {
+      "name": "fk.color.muted",
+      "type": "color",
+      "value": "#ADC4D4"
+    },
+    {
+      "name": "fk.color.border",
+      "type": "color",
+      "value": "#53778E"
+    },
+    {
+      "name": "fk.color.danger",
+      "type": "color",
+      "value": "#FF9EAA"
+    },
+    {
+      "name": "fk.color.focus",
+      "type": "color",
+      "value": "#7DDEFF"
+    },
+    {
+      "name": "fk.color.ink",
+      "type": "color",
+      "value": "#071827"
+    },
+    {
+      "name": "fk.space.1",
+      "type": "spacing",
+      "value": "4px"
+    },
+    {
+      "name": "fk.space.2",
+      "type": "spacing",
+      "value": "8px"
+    },
+    {
+      "name": "fk.space.3",
+      "type": "spacing",
+      "value": "12px"
+    },
+    {
+      "name": "fk.space.4",
+      "type": "spacing",
+      "value": "16px"
+    },
+    {
+      "name": "fk.space.5",
+      "type": "spacing",
+      "value": "20px"
+    },
+    {
+      "name": "fk.space.6",
+      "type": "spacing",
+      "value": "24px"
+    },
+    {
+      "name": "fk.space.7",
+      "type": "spacing",
+      "value": "32px"
+    },
+    {
+      "name": "fk.space.8",
+      "type": "spacing",
+      "value": "48px"
+    },
+    {
+      "name": "fk.radius.sm",
+      "type": "borderRadius",
+      "value": "8px"
+    },
+    {
+      "name": "fk.radius.md",
+      "type": "borderRadius",
+      "value": "12px"
+    },
+    {
+      "name": "fk.radius.lg",
+      "type": "borderRadius",
+      "value": "16px"
+    },
+    {
+      "name": "fk.radius.pill",
+      "type": "borderRadius",
+      "value": "999px"
+    },
+    {
+      "name": "fk.type.caption",
+      "type": "fontSizes",
+      "value": "12px"
+    },
+    {
+      "name": "fk.type.label",
+      "type": "fontSizes",
+      "value": "14px"
+    },
+    {
+      "name": "fk.type.body",
+      "type": "fontSizes",
+      "value": "16px"
+    },
+    {
+      "name": "fk.type.subtitle",
+      "type": "fontSizes",
+      "value": "20px"
+    },
+    {
+      "name": "fk.type.title",
+      "type": "fontSizes",
+      "value": "28px"
+    },
+    {
+      "name": "fk.type.hero",
+      "type": "fontSizes",
+      "value": "48px"
+    },
+    {
+      "name": "fk.type.family",
+      "type": "fontFamilies",
+      "value": [
+        "Noto Sans KR"
+      ]
+    },
+    {
+      "name": "fk.type.regular",
+      "type": "fontWeights",
+      "value": "400"
+    },
+    {
+      "name": "fk.type.bold",
+      "type": "fontWeights",
+      "value": "700"
+    },
+    {
+      "name": "fk.button.min",
+      "type": "sizing",
+      "value": "44px"
+    },
+    {
+      "name": "fk.button.standard",
+      "type": "sizing",
+      "value": "48px"
+    },
+    {
+      "name": "fk.button.game",
+      "type": "sizing",
+      "value": "60px"
+    },
+    {
+      "name": "fk.icon.sm",
+      "type": "sizing",
+      "value": "16px"
+    },
+    {
+      "name": "fk.icon.md",
+      "type": "sizing",
+      "value": "20px"
+    },
+    {
+      "name": "fk.icon.lg",
+      "type": "sizing",
+      "value": "24px"
+    },
+    {
+      "name": "fk.layout.mobile",
+      "type": "sizing",
+      "value": "390px"
+    },
+    {
+      "name": "fk.layout.tablet",
+      "type": "sizing",
+      "value": "768px"
+    },
+    {
+      "name": "fk.layout.desktop",
+      "type": "sizing",
+      "value": "1440px"
+    },
+    {
+      "name": "fk.layout.content",
+      "type": "sizing",
+      "value": "1200px"
+    },
+    {
+      "name": "fk.layout.gutter",
+      "type": "sizing",
+      "value": "16px"
+    },
+    {
+      "name": "fk.layout.nav",
+      "type": "sizing",
+      "value": "56px"
+    },
+    {
+      "name": "fk.hud.portrait",
+      "type": "sizing",
+      "value": "56px"
+    },
+    {
+      "name": "fk.hud.landscape",
+      "type": "sizing",
+      "value": "44px"
+    },
+    {
+      "name": "fk.touch.direction",
+      "type": "sizing",
+      "value": "132px"
+    },
+    {
+      "name": "fk.touch.action",
+      "type": "sizing",
+      "value": "128px"
+    },
+    {
+      "name": "fk.touch.gap",
+      "type": "sizing",
+      "value": "8px"
+    },
+    {
+      "name": "fk.touch.groupGap",
+      "type": "sizing",
+      "value": "12px"
+    },
+    {
+      "name": "fk.touch.panel",
+      "type": "sizing",
+      "value": "176px"
+    },
+    {
+      "name": "fk.touch.sceneMin",
+      "type": "sizing",
+      "value": "160px"
+    },
+    {
+      "name": "fk.touch.sceneCompact",
+      "type": "sizing",
+      "value": "120px"
+    },
+    {
+      "name": "fk.shadow.card",
+      "type": "shadow",
+      "value": [
+        {
+          "offsetX": "0",
+          "offsetY": "8",
+          "blur": "24",
+          "spread": "0",
+          "color": "#00000066",
+          "inset": false
+        }
+      ]
+    },
+    {
+      "name": "fk.layer.content",
+      "type": "number",
+      "value": "0"
+    },
+    {
+      "name": "fk.layer.hud",
+      "type": "number",
+      "value": "10"
+    },
+    {
+      "name": "fk.layer.controls",
+      "type": "number",
+      "value": "20"
+    },
+    {
+      "name": "fk.layer.sheet",
+      "type": "number",
+      "value": "30"
+    },
+    {
+      "name": "fk.layer.alert",
+      "type": "number",
+      "value": "40"
+    },
+    {
+      "name": "fk.motion.fast",
+      "type": "number",
+      "value": "120"
+    },
+    {
+      "name": "fk.motion.normal",
+      "type": "number",
+      "value": "200"
+    },
+    {
+      "name": "fk.motion.reduced",
+      "type": "number",
+      "value": "0"
+    }
+  ]
+}

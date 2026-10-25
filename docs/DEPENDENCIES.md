@@ -2,6 +2,16 @@
 
 확인일: 2026-10-25 (Asia/Seoul)
 
+## 2단계 CLI 추가
+
+공식 npm 메타데이터·CLI 문서(Node 20 이상)를 확인한 뒤 `supabase@2.122.0`을 정확한 버전의
+devDependency로 추가했습니다. package-lock.json도 함께 갱신했습니다. 직접 의존성은 현재 25개입니다.
+설치 후 npm run check(typecheck/lint/unit test 3개/build)와 npm ls --depth=0이 exit 0입니다.
+이번 추가 후 npm ci·E2E는 실행하지 않았습니다. 아래 24개/E2E 기록은 1단계 검증 당시 결과입니다.
+Wrangler는 기존 캐시 4.152.0을 재사용했고 프로젝트 의존성에 추가하지 않았습니다.
+
+공식 근거: https://supabase.com/docs/guides/local-development/cli/getting-started
+
 node_modules와 package-lock.json v3를 직접 확인했습니다.
 npm.cmd ls --depth=0은 exit 0이며 직접 의존성 24개가 정상입니다.
 모든 직접 의존성의 설치 버전이 package.json 범위·잠금 파일과 일치하며 Node engines를 충족합니다.

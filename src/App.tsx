@@ -6,6 +6,7 @@ import { CollectionPage } from './pages/CollectionPage'
 import { RankingPage } from './pages/RankingPage'
 import { LoginPage } from './pages/LoginPage'
 import { NotFoundPage } from './pages/NotFoundPage'
+import { ProfilePage } from './pages/ProfilePage'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="collection" element={<CollectionPage />} />
         <Route path="ranking" element={<RankingPage />} />
         <Route path="login" element={<LoginPage />} />
+        <Route path="profile" element={<ProfilePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

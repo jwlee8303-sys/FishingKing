@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-25",
+  "originalPreserved": true,
+  "normalFrames": 36,
+  "gameStates": [
+    {
+      "viewport": "320x568",
+      "state": "normal"
+    },
+    {
+      "viewport": "390x844",
+      "state": "normal"
+    },
+    {
+      "viewport": "430x932",
+      "state": "normal"
+    },
+    {
+      "viewport": "844x390",
+      "state": "normal"
+    },
+    {
+      "viewport": "768x1024",
+      "state": "normal"
+    },
+    {
+      "viewport": "1440x900",
+      "state": "normal"
+    },
+    {
+      "viewport": "390x844",
+      "state": "bite"
+    },
+    {
+      "viewport": "390x844",
+      "state": "reeling"
+    },
+    {
+      "viewport": "390x844",
+      "state": "cancelled"
+    },
+    {
+      "viewport": "844x390",
+      "state": "loading"
+    },
+    {
+      "viewport": "844x390",
+      "state": "error"
+    },
+    {
+      "viewport": "844x390",
+      "state": "paused"
+    },
+    {
+      "viewport": "844x390",
+      "state": "empty"
+    }
+  ],
+  "outside": [],
+  "textOverflow": [],
+  "touchTooSmall": [],
+  "visualReviewed": [
+    "Fishing 390x844 normal",
+    "Fishing 844x390 normal",
+    "Main 1440x900 normal (after spacing correction)",
+    "Profile 320x568 normal (after navigation overlap correction)"
+  ],
+  "runtimeTests": "not run; no runtime source changes"
+}

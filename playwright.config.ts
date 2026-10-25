@@ -24,6 +24,10 @@ export default defineConfig({
         hasTouch: true,
       },
     },
+    { name: 'compact', use: { viewport: { width: 320, height: 568 }, isMobile: true, hasTouch: true } },
+    { name: 'wide-mobile', use: { viewport: { width: 430, height: 932 }, isMobile: true, hasTouch: true } },
+    { name: 'landscape', use: { viewport: { width: 844, height: 390 }, isMobile: true, hasTouch: true } },
+    { name: 'tablet', use: { viewport: { width: 768, height: 1024 }, isMobile: true, hasTouch: true } },
   ],
   webServer: process.env.PLAYWRIGHT_BASE_URL ? undefined : {
     command: 'node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 4173 --strictPort',
