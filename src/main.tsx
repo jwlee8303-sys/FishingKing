@@ -9,6 +9,6 @@ if (!rootElement) throw new Error('앱을 표시할 root 요소가 없습니다.
 
 createRoot(rootElement).render(
   <StrictMode>
-    <BrowserRouter><App /></BrowserRouter>
+    <BrowserRouter basename={new URL(import.meta.env.BASE_URL,window.location.href).pathname}><App /></BrowserRouter>
   </StrictMode>,
 )

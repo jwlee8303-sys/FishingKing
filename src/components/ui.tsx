@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 export function PrimaryButton({ className='',variant='primary',type='button',...props }: ButtonProps) {
   return (
-    <button type={type} className={`button button-${variant} ${className}`} {...props} />
+    <button type={type} className={`button button-${variant} ${className}`} {...props} onClick={event => { event.currentTarget.focus({ preventScroll: true }); props.onClick?.(event) }} />
   )
 }
 export function SecondaryButton(props: ButtonProps) {

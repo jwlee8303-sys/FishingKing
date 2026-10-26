@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "purpose": "Build-time conversion recipes, not a runtime AssetManifest",
+  "images": [
+    { "source": "graphics/source/bass-main.png", "output": "public/assets/fish/bass-main.webp", "width": 1024, "height": 1024, "fit": "inside", "quality": 86, "alphaQuality": 100, "requireAlpha": true },
+    { "source": "graphics/source/lake-day.png", "output": "public/assets/backgrounds/lake-day.webp", "width": 1600, "height": 900, "fit": "cover", "quality": 80, "requireAlpha": false },
+    { "source": "graphics/source/lake-day-mobile.png", "output": "public/assets/backgrounds/lake-day-mobile.webp", "width": 720, "height": 1080, "fit": "cover", "quality": 80, "requireAlpha": false }
+  ]
+}

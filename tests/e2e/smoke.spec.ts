@@ -77,6 +77,7 @@ test('게임 HUD, 버튼 영역 분리, 누름 해제와 회전, 메뉴 접근',
 
 test('로그인 필드, 키보드 접근, 비회원 및 시연 상태',async ({ page },testInfo) => {
   await page.goto('/')
+  await expect(page.getByRole('link',{ name: '본문으로 이동' })).toBeAttached()
   await page.keyboard.press('Tab'); await expect(page.getByRole('link',{ name: '본문으로 이동' })).toBeFocused()
   await page.keyboard.press('Enter'); await expect(page.getByRole('main')).toBeFocused()
   await page.goto('/login')
@@ -94,11 +95,11 @@ test('로그인 필드, 키보드 접근, 비회원 및 시연 상태',async ({ 
   await expect(page).toHaveURL(/\/game$/)
 })
 
-test('직접 누름과 취소, Safe Area 기본 여백 및 시연 상태',async ({ page },testInfo) => {
+test('직접 누름과 취소, Safe Area 기본 여백 및 시연 상태',async ({ page,browserName },testInfo) => {
   await page.goto('/game')
   const reel=page.getByRole('button',{ name: '릴 감기',exact: true })
   const box=(await reel.boundingBox())!
-  if(testInfo.project.use.hasTouch) {
+  if(testInfo.project.use.hasTouch&&browserName==='chromium') {
     const session=await page.context().newCDPSession(page)
     await session.send('Input.dispatchTouchEvent',{ type: 'touchStart',touchPoints: [{ x: box.x+box.width/2,y: box.y+box.height/2,id: 1 }] })
     await expect(reel).toHaveAttribute('aria-pressed','true')

@@ -13,7 +13,7 @@ export function AppLayout() {
   const game=pathname==='/game'
   return (
     <div className={`app-shell ${game? 'game-route':''} ${pathname==='/login'? 'login-route':''}`}>
-      <a className="skip-link" href="#main-content">본문으로 이동</a>
+      <a className="skip-link" href="#main-content" tabIndex={0}>본문으로 이동</a>
       {!game&&<AppHeader />}
       <main id="main-content" tabIndex={-1} className={game? 'game-main':'page-content'}>
         <Outlet />

@@ -1,19 +1,149 @@
 # FishingKing 로드맵 진행 상황
 
-확인일: 2026-10-25 (Asia/Seoul)
+확인일: 2026-10-26 (Asia/Seoul)
 
 | 단계 | 상태 |
 | --- | --- |
 | 1. 개발 환경 구축 | 완료 |
 | 2. 외부 서비스 및 MCP 연결 | 완료 — 확정된 Pages 정적 에셋 정책 기준, R2 의도적 보류·Cloudinary 향후 검토 |
-| 3. Penpot 디자인 및 그래픽 제작 | 진행 중 — 3-01~3-04 완료, 최종 에셋·게임 입력/Pixi 후속 |
+| 3. Penpot 디자인 및 그래픽 제작 | 3-10-R1 조사·회귀 종료, 전체 완료 보류 — WebKit 회전 표시 실패 및Desktop timeout 미해결, 실기기 미검증은 별도 잔여 위험 |
 | 4. Supabase DB 및 인증 | 미착수 |
 | 5. 낚시 게임 엔진 | 미착수 |
 | 6. 물고기 도감·랭킹·커뮤니티 | 미착수 |
 | 7. 통합 테스트 및 자동 배포 | 미착수 |
 | 8. 정식 운영 및 확장 | 미착수 |
 
-## 최신 실행 결과 — 3-04 / 2026-10-25
+## 최신 실행 결과 — 3-10-R1 / 2026-10-26
+
+기존128파일·추적수정18/미추적60과3-09/3-10 증거를 보존했습니다.
+WebKit 회전 후 표시 실패는 Pixi 없는 최소WebGL에서도 재현됐습니다. 내부buffer색상/GL오류/DOM·renderer치수와
+페이지/element/fullPage 캡처를 분리했고, backing buffer resize가 있는 대조에서만 표시가 사라졌습니다.
+세 가지 가설 대조 후 안전한 제품 수정 근거가 없어 GameCanvas/scene/TexturePool/CSS를 변경하지 않았습니다.
+실제iPhone Safari 결과는 아니며 **핵심 시각FAIL이 남아3단계 전체 완료 보류**입니다.
+
+태블릿은 문서 변경 신호→Vite full-reload→모달소실→click timeout을 격리 재현했습니다.
+검사 전용 scripts/testing/dev-server.mjs만 watch:null/hmr:false로 고쳐 외부 변경 간섭을 차단했습니다.
+Modal/실제 클릭/timeout/assert·일반npm run dev는 유지했습니다. 재진입12회(문서 신호 주입2회)·원본Tablet 반복10회·관련선택10개PASS.
+과거 단일timeout의 원인이 모두 같다고 확정하지 않으며 원래239/1 기록을 보존합니다.
+TypeScript/ESLint/build·전체단위208·에셋10·HTTP21응답PASS.
+R1 전체Playwright는 **239 PASS/1 FAIL**(Desktop Chromium19/1,Mobile Chromium100/0,WebKit120/0),914.390초,skip/자동retry0입니다.
+원래Tablet은전체20/20 PASS지만 다른Desktop 입력검사의30000ms/컨텍스트 종료timeout이 발생했습니다.
+새실패 선택3회는통과했으나 원인미확정이며 전체FAIL은 유지합니다. WebKit의별도시각FAIL도 유지합니다.
+최종 집계/한계는 [PHASE3_10_R1_FIX_REPORT.md](PHASE3_10_R1_FIX_REPORT.md)를 따릅니다.
+성능/heap 위험은 후속으로 유지하고 실기기·발열/배터리는 미확인입니다.4단계/commit/push/원격변경 없음.
+
+## 이전 실행 결과 — 3-10 / 2026-10-26
+
+3-09의 잠정 완료를 실제 보고서·Playwright 원시 JSON·장시간 소스 스냅샷으로 재확인했습니다.
+과거240 PASS(Chromium120/WebKit120)와601.282초 장시간 기록이 존재하며 현재 src/public/fixtures와 스냅샷 불일치0입니다.
+이번 check의 TypeScript/ESLint/Vitest208/Vite build, 에셋10·실제7파일 오류0/경고0·HTTP21응답·토큰63 검사 PASS.
+전체 Playwright **239 PASS/1 FAIL**: Desktop Chromium20/0, Mobile Chromium99/1, WebKit120/0, skip/자동retry0.
+태블릿 Chromium 반복 재진입의 홈 링크 click timeout은 별도 같은 조건3회 통과했으나 원인은 미확정입니다.
+추가 상태4개·production18경로 PASS. **WebKit 회전 후 장면 표시의 추가 시각 검증은 FAIL**이며
+DOM/메타데이터·alpha만 확인하는 기존 자동 검사로 검출되지 않았습니다. 제품/검사 환경 원인은 미확정입니다.
+상세 집계·실패 trace·PNG는 [PHASE3_FINAL_REPORT.md](PHASE3_FINAL_REPORT.md)의10절을 따릅니다.
+
+실기기 Android/iPhone·WebKit10분·GPU 메모리/발열/배터리는 미검증입니다.
+실기기 미검증은 별도 잔여 위험이며 자동 검사 FAIL이나 추가 필수 완료 조건으로 집계하지 않습니다.
+실제 휴대폰 발열·배터리 사용량은 실기기 검증 전까지 미확인·미측정으로 유지합니다.
+성능 목표는60FPS 지향·저성능 환경30FPS 수준의 조작입니다.
+3-09 실측 재사용값은DPR2 평균30.99FPS/하위5% 근사20FPS이며 목표 달성은 인정하지 않습니다.
+GC 후heap+2,552,580bytes는 관찰된 증가량으로 원인 미확인입니다. 이번3-10 신규 성능 실측은 없습니다.
+Penpot 이번 라이브 읽기는 연결 인스턴스가 없어 실패, 기존63토큰/38컴포넌트/화면 JSON을 검토했습니다.
+따라서 필수 검증 전부 PASS 및 **3단계 전체 완료로 표시하지 않습니다.**
+
+4단계 설계 인수인계는 준비됐습니다. 기존 Supabase 스키마 읽기 확인부터 진행하고 fish_species/profiles/catches/
+user_collection/comments/game_sessions·회원/비회원 승계·RLS/서버 검증을 별도 확정합니다.
+어종 ID와 Asset ID를 분리하며 DB에 실제 이미지 URL을 직접 저장하지 않습니다.
+5단계는 기존 GameCanvas/InputController를 재사용해 정식 상태 전이·낚시 시스템·서버 포획 결과 검증을 구현합니다.
+현재 조작은 모의 상태이며 정식 포획/보상은 없습니다.
+이번 문서5개 갱신·종합 보고서1개 신규, 기존 코드/패키지/테스트/그래픽·미커밋 변경 보존.
+commit/push·운영 배포·DB·외부 서비스·과금·Penpot 원본 변경 없음. **3-10에서 종료하며4단계 자동 착수 없음.**
+
+## 이전 실행 결과 — 3-09 / 2026-10-25
+
+**3-09 호환성·안정화 자동 검사 완료. 실기기 및 성능 목표는 아래 한계를 유지합니다.**
+Chromium120·WebKit120 = Playwright240 PASS(고유20개 ×12프로젝트), 최종 실패/skip/자동 retry0,966.151초.
+기존198 단위/7 에셋/54 Chromium 실행을 보존하고 최종 단위208·에셋10 PASS입니다.
+TypeScript/ESLint/Vite build·assets:check(ERROR0/WARNING0)·UTF-8/설정 형식·git diff --check PASS.
+root/subpath/절대 HTTP base의 실제 production build에서21개 에셋 응답의 MIME/bytes/SHA 및 각6개 SPA 화면을 검증했습니다.
+확인된 WebKit 포커스·입력 blur·문서 종료 후 요청과 하위 base 라우팅을 최소 수정했습니다.
+Chromium601.282초 유지·30회 회전·100회 입력·30회 재진입 PASS. 별도 강화된 종료 대기로30회 재진입 PASS.
+최종 app/초기화/텍스처/참조/정리/canvas0, DOM158·전역 listener17/1/0 복귀.
+GC 후 JS heap은2,552,580bytes 증가해 retained heap 원인은 미확인입니다. 누수 전면 부재를 선언하지 않습니다.
+DPR2 실제 렌더 평균30.99FPS/하위5% 근사20FPS로60FPS 목표 미달. DPR1 단기58.00FPS, WebKit 단기50.18FPS.
+WebKit은 에뮬레이션이며10분 실행/실제 Android·iPhone/GPU 메모리/발열·배터리는 미검증입니다.
+실행 OS Windows10은 현재 Playwright 공식 Windows11+ 지원 범위 밖입니다. 최초 실패와 수정·재실행도 보고서에 보존했습니다.
+기존 그래픽·lockfile·서비스·운영 설정과 미커밋 변경을 보존했습니다. 배포·commit/push·다음 단계 실행 없음.
+상세: [PHASE3_09_TEST_REPORT.md](PHASE3_09_TEST_REPORT.md), [실기기 체크리스트](MOBILE_DEVICE_TEST_CHECKLIST.md).
+**3-10 인수인계 가능. 실기기·성능·heap 한계는 미완료로 넘기며 자동 진행하지 않습니다.**
+
+## 이전 실행 결과 — 3-08 / 2026-10-25
+
+**3-08 React AssetImage·PixiJS 실제 에셋 로딩 및 모바일/PC 모의 입력 통합 완료.**
+기존 AssetResolver/PagesStaticProvider/6개 ID·7파일·모바일 variant·HUD/버튼/라우팅을 재사용했습니다.
+낚시 화면에 실제 호수·배스 Sprite, 도감의 별도 에셋 미리보기에 AssetImage를 연결했습니다. 발견 기본 목록은 빈 상태를 유지합니다.
+StrictMode/lazy import/init 도중 언마운트 정리, ResizeObserver·DPR 상한2/저품질1 옵션, 종횡비·cover·회전 배경 경합 방지를 구현했습니다.
+공통 InputController는 기존 점 표기 명령·고유 activation·sequence/epoch를 사용하고 cast/reel·방향·입질을 모의 표시합니다.
+포인터 소유권/멀티터치/버튼 이탈·cancel/lostcapture/키 repeat/blur/visibility/회전/메뉴/언마운트 취소를 검증했습니다.
+TexturePool은 canonical URL별 공유 Promise·참조 수·unload 경합을 관리하고 다른 장면의 텍스처를 파괴하지 않습니다.
+ID/메타데이터/접근 오류와 HTTP·HTML200·decode 실패를 구분하고 terminal placeholder 실패를 처리합니다.
+
+최종 Vitest198개(기존146+신규52), 자산 테스트7개, Playwright54개(기존30+신규24) PASS.
+TypeScript/ESLint/Vite build 및 assets:check/14응답 assets:http PASS.
+지정6 viewport 설치 Chrome 에뮬레이션에서 실제 이미지·입력·회전 상태 보존·기존 메뉴·가로 overflow·정상 경로 콘솔/페이지 오류를 검사했습니다.
+별도 짧은 FPS 표본59.5~60.6, 모바일 DPR2·데스크톱1 및 초기 배경1/배스1 요청을 관찰했습니다. 실기기 성능 달성 주장은 아닙니다.
+WebKit/전용 Chromium 바이너리는 미설치, 실제 Android Chrome/iPhone Safari·발열·배터리·장시간 성능은 미검증입니다.
+실제 포획/AI/물리/서버 판정/보상/기록 저장은5단계 후속입니다. 패키지·그래픽·외부 서비스·운영 배포·commit/push 변경 없음.
+상세: [PHASE3_08_GAME_INTEGRATION.md](PHASE3_08_GAME_INTEGRATION.md).
+**3-09 진행 준비 가능. 자동 진행하지 않습니다.**
+
+## 이전 실행 결과 — 3-07 / 2026-10-25
+
+**3-07 PagesStaticProvider 및 기본 공개 Provider 등록 완료.**
+기존 Manifest/Resolver/variant/경로 validator를 재사용하고 Pages 공개 전용 async URL 해석을 추가했습니다.
+직접 호출도 등록된 ID·파일·variant·버전과 대조하고 private/위험 경로/메타데이터 불일치를 거부합니다.
+services/assetRuntime.ts에서 기본 Pages Provider를 등록하며 Mock 교체 및 명시 선택 계약을 검증했습니다.
+기존 getAssetUrl API를 유지하고 공통 URL 유틸리티로 BASE_URL 루트·하위 경로·HTTP(S) 전체 base를 지원합니다.
+상대 base는 현재 미사용이므로 명시 거부합니다. 운영 Vite 설정·외부 서비스·UI·그래픽·기존 변경은 보존했습니다.
+
+Vitest146개(기존93+신규53), 자산 검사 테스트7개, 기존 Playwright30개 PASS.
+TypeScript/ESLint/Vite build PASS, assets:check 실제7파일 및 Manifest 오류0, assets:build 기존3개 skipped.
+신규 assets:http는 격리된 root 및 /fishingking/ 실제 프로덕션 빌드와 컴파일된 BASE_URL을 확인하고
+7개씩 총14응답의 HTTP200/MIME/바이트/용량/SHA 일치를 검증했습니다. 누락 이미지는 두 preview의 HTML200 SPA fallback으로 식별했습니다.
+Pages 기본 캐시·ETag 및 버전/SHA 정합성 정책을 문서화했으며 _headers·운영 캐시 설정은 변경하지 않았습니다.
+실제 운영 CDN·실기기·React/Pixi 로딩은 미검증입니다. 상세: [ASSET_STORAGE.md](ASSET_STORAGE.md).
+**3-08 인수인계 가능. 자동 진행·배포·commit/push 없음.**
+
+## 이전 실행 결과 — 3-06 / 2026-10-25
+
+**3-06 AssetManifest·AssetResolver 및 AssetProvider 인터페이스 구현 완료.**
+6개 논리 ID에 실제 파일7개를 등록했고 background.lake.day의 mobile-portrait를 같은 ID의 variant로 관리합니다.
+TypeScript ID 추론·런타임 ID/Metadata/경로/MIME/중복·fallback 참조·순환 검사, 순수 viewport/layout/DPR 선택을 구현했습니다.
+Resolver는 Provider 주입·public/private 접근 검사·비동기 URL 결과/만료 검증·명시적 fallback·로딩 실패/취소 오류를 제공합니다.
+private 기본 거부, fallback으로 접근 거부를 숨기지 않으며 실제 Pages/Supabase/R2/Cloudinary Provider는 연결하지 않았습니다.
+
+기존 assets:build/check/test 보존·확장: 실제7개 파일 경로/MIME/치수/용량/SHA 대조 및 public/private 폴더 혼합 검출.
+최종 Vitest93개(기존5+신규88), 자산 Node7개(기존5+신규2), 기존 Playwright30개 통과.
+TypeScript/ESLint/Vite build 및 assets:check 오류0. 새 의존성 없이 Node24·기존 도구를 사용했습니다.
+기존 3-05 미커밋 변경·React UI/라우터·토큰·그래픽·서비스·외부 연결을 보존했습니다.
+상세 설계·API·3-07 인계는 [ASSET_ARCHITECTURE.md](ASSET_ARCHITECTURE.md)를 따릅니다.
+실제 PagesStaticProvider는3-07, React/Pixi 이미지 로딩은3-08입니다. 이번 배포·commit/push·다음 단위 자동 진행은 없습니다.
+
+## 이전 실행 결과 — 3-05 / 2026-10-25
+
+**3-05 SVG·WebP 기본 그래픽 및 변환·검사 기반 완료.** 배스1·호수 가로/세로2 WebP와 아이콘3·이미지 누락1 SVG를 제작했습니다.
+원본 PNG3개는 graphics/source, 배포 파일7개는 public/assets에 분리했습니다. 기본 아트 후보이며 최종 게임 아트 확정·실기기 검수는 후속입니다.
+Sharp0.35.5와 기존 xmldom0.8.15 직접 개발 의존성, assets:build/check/test 명령을 추가했습니다.
+동일 변환 건너뛰기·덮어쓰기/경로 이탈 방지·디코딩/알파·SVG XML/위험 요소·크기/용량·SHA 중복 검사를 구현했습니다.
+
+최종 typecheck/lint/기존 단위5/build 통과. 자산 Node 테스트5, 기존 UI24+그래픽6=Playwright30 통과(exit0).
+격리된 npm ci 및 Sharp WebP 재현 검증 성공. 배포 파일7개가 dist에 동일하게 복사되고 원본 graphics/source는 제외됨을 확인했습니다.
+React 화면·라우터·디자인 토큰·서비스·Penpot 보존. 타입에는 placeholders 디렉터리만 추가했습니다.
+상세 크기/용량·출처·검사·3-06 ID 인계는 [GRAPHICS_PIPELINE.md](GRAPHICS_PIPELINE.md)를 참조합니다.
+Manifest/Resolver/Provider·실제 Pixi 로딩·휴대폰/Safari 검증은 미완료입니다. 운영 배포·commit/push 및 3-06 자동 진행은 없습니다.
+
+## 이전 실행 결과 — 3-04 / 2026-10-25
 
 **3-04 React·Tailwind 모바일 UI 구현 완료.** 기존 Remote Penpot를 읽기만 하고 기존 토큰63개·컴포넌트38개를 대조했습니다.
 6개 화면(/, /game, /collection, /ranking, /profile, /login)과 기존404를 구현·유지했습니다.

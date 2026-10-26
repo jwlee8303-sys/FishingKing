@@ -1,5 +1,36 @@
 # FishingKing 3-02 — 모바일 게임 UX 및 입력 설계
 
+## 최신 구현·검증 상태 — 3-10 / 2026-10-26
+
+아래 3-02 설계·3-04 기록은 작성 당시 상태입니다. 현재는 3-08의 GameCanvas·InputController·공유 TexturePool과
+3-09의 호환성 보완까지 구현했습니다. 최신 종합 판정은 [PHASE3_FINAL_REPORT.md](PHASE3_FINAL_REPORT.md)를 따릅니다.
+
+- React HUD·최소44px 조작·Safe Area 네 방향·100dvh, 모바일 세로/가로·태블릿·PC 배치를 유지합니다.
+- Asset ID로 실제 호수·배스 및 세로 배경을 로딩하고, 컨테이너 resize·회전 중 최신 배경 요청만 적용합니다.
+- cast/reel/move/react/reset 명령, 역할별 pointer owner·키보드 C/R/E·WASD/방향키,
+  길게 누름·멀티터치·이탈 release·cancel/lostcapture·메뉴/blur/hidden/회전/언마운트 입력 해제를 구현했습니다.
+- 방향은 화살표 버튼입니다. 아래 설계의 아날로그 패드 drag·dead zone은 구현 완료 항목이 아닙니다.
+  복귀 시 입력은 중립이며 백그라운드와 메뉴 동안 모의 ticker를 멈춥니다. 서버 시간 정지 보장은 아닙니다.
+- Chromium의 CDP 터치·다중 포인터 검사와 WebKit native tap/Pointer Events 검사를 구분합니다.
+  WebKit 네이티브 다중 손가락·touchCancel, 실제 Android/iPhone·노치/주소창/가상 키보드·발열/배터리는 미검증입니다.
+- 3-10 전체 자동검사는239 PASS/1 FAIL이며 태블릿 Chromium 재진입 timeout은 선택3회 통과·원인 미확정입니다.
+  WebKit 자동120 PASS와 별도로 **회전 후 장면이 사라지는 추가 시각FAIL**을 확인했습니다.
+  준비 메타데이터/프레임 진행·불투명 픽셀만으로 합격 판정하지 않습니다. 제품/Windows WebKit 표시 환경 원인은 미확정이며 실기기 대조가 필요합니다.
+- 3-09의 실제 소스 스냅샷이 현재 src/public/tests/fixtures와 일치함을 확인했습니다. 장시간 Chromium601.282초,
+  회전30·입력100·재진입30 후 앱/텍스처 참조/canvas0 복귀 기록을 재사용합니다.
+  **실측(3-09 재사용):** DPR2 평균30.99FPS·하위5% 근사20FPS, GC 후 heap+2,552,580bytes(원인 미확인),
+  DPR1 단기58.00FPS·WebKit 단기50.18FPS입니다. 이번3-10 신규 성능 측정이나 실제 휴대폰 실측은 아닙니다.
+  **성능 목표:**60FPS 지향·저성능 환경30FPS 수준에서도 조작 가능. 현재 달성 판정하지 않습니다.
+  **검사 설정/미측정:** WebKit600초 검사는 미실행, GPU 메모리는 미측정입니다. ticker.maxFPS60 설정은 실측FPS가 아닙니다.
+
+입력·시각화는 **모의 상태**입니다. 실제 입질 시간·파이팅·포획/보상·서버 결과 검증은 5단계에서 확정합니다.
+GameCanvas와 InputController를 재사용하고 엔진에서 장치별 DOM 이벤트를 다시 구현하지 않습니다.
+수동 절차는 [MOBILE_DEVICE_TEST_CHECKLIST.md](MOBILE_DEVICE_TEST_CHECKLIST.md)를 따르며 미실행 결과를 PASS로 옮기지 않습니다.
+실기기 미검증은 자동 검사와 분리한 **별도 잔여 위험**입니다. 추가 필수 완료 조건이나 자동 FAIL로 집계하지 않습니다.
+실제 휴대폰 발열·배터리 사용량은 실기기 검증 전까지 미확인·미측정으로 유지합니다.
+
+## 과거 설계 기록 — 3-02 / 3-04
+
 작성일: 2026-10-25 (Asia/Seoul). 기준: 공통 개발 지침 v3.1.
 상태: **설계 문서 / 코드·PixiJS·Penpot 미구현**.
 위 상태는 3-02 작성 당시 기록입니다. 3-04에서 React HUD·세로/가로 조작 배치·DOM 누름/취소 표시를 구현했습니다.

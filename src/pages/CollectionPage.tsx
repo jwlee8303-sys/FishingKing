@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router'
 import { FishCard } from '../components/content'
 import type { DiscoveredFish } from '../components/content'
+import { AssetImage } from '../components/AssetImage'
 import { EmptyState,InputField,LoadingState,Modal,PageTitle,SecondaryButton,StatusBadge } from '../components/ui'
 
 const examples: DiscoveredFish[]=[
@@ -39,6 +40,7 @@ export function CollectionPage() {
           <SecondaryButton onClick={() => { setState('normal'); setDemo(false) }}>빈 화면</SecondaryButton>
         </div>
       </details>
+      <details className="preview-tools"><summary>에셋 미리보기 · 사용자 발견 기록 아님</summary><AssetImage assetId="fish.bass.main" alt="배스 그래픽 샘플" loading="eager" /></details>
       <Modal open={selected!==null} title={selected?.name??'물고기 정보'} onClose={() => setSelected(null)}>
         <StatusBadge>발견 예시 · UI 시연</StatusBadge>
         <dl className="mt-6 space-y-3">
